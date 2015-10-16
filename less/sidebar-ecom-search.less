@@ -3,9 +3,10 @@
 // ---------------------
 
 
-    .template-sidebar .ecomproductslist__form {
+
+    .template-sidebar .sidebar-ecom-search .widget {
         padding: 0;
-        background-color: transparent;
+        background-color: @color-swatch7;
         border: none;
         .form-body {
             width: 100%;
@@ -21,7 +22,8 @@
         }
     }
 
-    .sidebar-ecom-search .ecomproductslist__form {
+
+    .sidebar-ecom-search .widget {
         position: fixed;
         left: 0;
         top: 0;
@@ -29,9 +31,6 @@
         width: 100%;
         .transform(@y:0, @x:-100%);
         transition-duration: 0.4s;
-        // @media only screen and (max-width: 600px) {
-        //     .transform(@y:-100%, @x:0);
-        // }
 
         z-index: 2;
 
@@ -48,14 +47,27 @@
         }
     }
 
+    .ecomproductslist {
+        .listing-body,
+        .listing-title,
+        .fieldset--filters,
+        .listing-order,
+        .listing-footer {
+            display: none;
+        }
+    }
+
     // Blog Search when nav is ecomsearch-open
-    .ecomsearch-open .ecomproductslist__form {
+
+    .ecomsearch-open .sidebar-ecom-search .widget
+     {
       .transform(@x:0, @y:0);
     }
 
 
     // Hides ecomproductslist__form until toggled
-    .sidebar-ecom-search .ecomproductslist__form {
+
+    .sidebar-ecom-search .widget {
         margin: 0;
             .ecomsearch-open & {
                 display: -ms-flexbox;
