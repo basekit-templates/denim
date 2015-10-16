@@ -1,0 +1,48 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+{% include "includes/sidebar.twig" %}
+
+
+<div class="page-wrapper">
+
+        {% include "includes/header.twig" %}
+
+        {{widget('feature', 'featurehome', {
+            "header": "profile",
+            "defaultBgImg": asset('images/feature-bg.jpg'),
+            'positionTopPercentage': '50',
+            'showBtn': true,
+            buttonText: "Lorem Ipsum"
+        })|raw}}
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Page Content -->
+        <section class="template-content">
+
+        <!-- Main Widget Zone -->
+        {{zone('main')|raw}}
+
+         <!-- Footer Text Widget -->
+         <footer class="template-footer">
+            {{widget('content', 'footer-content', {
+            content: '<p>&copy; Copyright</p>'
+            })|raw}}
+        </footer>
+
+    </section>
+    <!-- End Page Content -->
+
+    </div>
+    <!-- End Container -->
+
+    </div>
+    <!-- End Page Wrapper -->
+
+
+
+{% endblock %}

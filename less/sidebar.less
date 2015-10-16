@@ -1,0 +1,55 @@
+// --------------
+// Sidebar
+// --------------
+
+
+.template-sidebar {
+    position: fixed;
+    z-index: 99999999;
+    top: 0;
+    width: 80px;
+    height: 100vh;
+    background-color: @color-swatch4;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        height: 45px;
+    }
+}
+
+.sidebar-container {
+    height: 100vh;
+    width: 80px;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: @color-swatch4;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        height: 45px;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: space-between;
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+    }
+}

@@ -1,0 +1,143 @@
+{
+    "name": "Denim",
+    "thumbnail": "thumbnail.png",
+    "screenshot": "denim-screenshot.jpg",
+    "widgetVersion":2,
+    "pageTypes": ["home"],
+    "templateType":"blog",
+    "tags": {
+        "en": ["blog", "photography", "design", "portfolio", "gallery", "camera", "images", "technology", "creative", "media"],
+        "es": ["blog", "fotografía", "diseño", "portafolio", "galería", "cámara", "imágenes", "tecnología", "creativo", "comunicación"],
+        "br": ["blog", "fotografia", "design", "portfolio", "galeria", "câmara", "imagens", "tecnologia", "criativo", "mídia"]
+    },
+    "images": [
+        "images/logo-default.png"
+    ],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#222a3f",
+            "color3":"#d6e1ee",
+            "color4":"#222a3f",
+            "color5":"#948e8c",
+            "color6":"#948e8c",
+            "color7":"#f6f5f3"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#88B4E8",
+            "color3":"#121010",
+            "color4":"#121010",
+            "color5":"#121010",
+            "color6":"#121010",
+            "color7":"#121010"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#72C1B0",
+            "color3":"#121010",
+            "color4":"#121010",
+            "color5":"#121010",
+            "color6":"#121010",
+            "color7":"#121010"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#CECED2",
+            "color3":"#121010",
+            "color4":"#121010",
+            "color5":"#121010",
+            "color6":"#121010",
+            "color7":"#121010"
+        }
+    },
+    "fontSwatch": {
+       "title": "Helvetica Neue, Helvetica, Arial, sans-serif",
+        "font1": {
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "26px",
+            "font-weight": "300",
+            "line-height": "45px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "22px",
+            "font-weight": "300",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "20px",
+            "font-weight": "300",
+            "line-height": "inherit",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "18px",
+            "font-weight": "300",
+            "line-height": "inherit",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "18px",
+            "font-weight": "200",
+            "line-height": "33px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "26px",
+            "font-weight": "300",
+            "line-height": "inherit",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch4",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+         },
+        "font7": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "inherit",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,10%)"
+        },
+        "font8": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "34px",
+            "font-weight": "300",
+            "line-height": "inherit",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "inherit",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "30px",
+            "font-weight": "300",
+            "line-height": "inherit",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        }
+    }
+}

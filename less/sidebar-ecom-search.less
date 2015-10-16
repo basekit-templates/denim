@@ -1,0 +1,214 @@
+// ---------------------
+// Sidebar - Ecom Search
+// ---------------------
+
+
+    .template-sidebar .ecomproductslist__form {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        .form-body {
+            width: 100%;
+        }
+        .legend {
+            color: @color-swatch7;
+        }
+        .button {
+            background-color: @color-swatch3;
+        }
+        .button:hover {
+            background-color: lighten(@color-swatch3, 10%);
+        }
+    }
+
+    .sidebar-ecom-search .ecomproductslist__form {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        .transform(@y:0, @x:-100%);
+        transition-duration: 0.4s;
+        @media only screen and (max-width: 600px) {
+            .transform(@y:-100%, @x:0);
+        }
+
+        z-index: 2;
+
+        padding: 150px 100px;
+        background-color: @color-swatch7;
+
+        // Allows scrolling on mobile
+        .ecomsearch-open & {
+            overflow: auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding: 70px 40px;
+        }
+    }
+
+    // Blog Search when nav is ecomsearch-open
+    .ecomsearch-open .ecomproductslist__form {
+      .transform(@x:0, @y:0);
+    }
+
+
+    // Hides ecomproductslist__form until toggled
+    .sidebar-ecom-search .ecomproductslist__form {
+        margin: 0;
+            .ecomsearch-open & {
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-align-content: center;
+                -ms-flex-line-pack: center;
+                align-content: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                border-left: 80px solid @color-swatch4;
+                @media only screen and (max-width: 600px) {
+                    border-left: 0;
+                    border-top: 45px solid @color-swatch4;
+                }
+            }
+    }
+
+    // Search Toggle Icon
+
+    .sidebar-search-icon {
+        position: relative;
+        .animation;
+        // Displays as icon's middle bar
+        background-clip: content-box;
+        width: 80px;
+        height: 45px;
+        margin: 0;
+        text-indent: 9999px;
+        overflow: hidden;
+        display: block;
+
+        .transition(@duration:0.2s, @ease:ease-in-out);
+
+        &:before {
+                position: absolute;
+                top: 50%;
+                margin-top: -17px;
+                right: 50%;
+                margin-right: -10px;
+                content: "\F002";
+                font-family: 'FontAwesome', sans-serif;
+                font-size: 24px;
+                color: @color-swatch1;
+                .transition(@duration:0.2s, @ease:ease-in-out);
+                @media only screen and (max-width: 600px) {
+                    margin-top: -16px;
+                }
+            }
+
+        &:hover {
+            &:before {
+                color: @color-swatch3;
+                .transition(@duration:0.2s, @ease:ease-in-out);
+            }
+        }
+
+        // Toggle Button ecomsearch-open state
+        // ------------------------------
+
+        .ecomsearch-open & {
+            background-color: fade(@color-swatch7, 0%);
+            z-index: 100000;
+
+            &:after,
+            &:before {
+                content: "";
+                height: 3px;
+                width: 30px;
+                position: absolute;
+                left: 20px;
+                display: block;
+                background: @color-swatch7;
+                margin-right: 0;
+                margin-left: 0;
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
+            }
+
+            &:before {
+                top: 38px;
+                background: @color-swatch7;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+
+            }
+            &:after {
+                bottom: 21px;
+                background: @color-swatch7;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                @media only screen and (max-width: 600px) {
+                    bottom: 20px;
+                }
+            }
+        }
+    }
+
+    @keyframes bar1 {
+        0% {
+            top: 13px;
+        }
+        50% {
+            top: 23px;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 23px; background: @color-swatch1;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    @-webkit-keyframes bar1 {
+        0% { top: 13px;}
+        50% { top: 23px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+        100% {  }
+    }
+
+    @keyframes bar2 {
+        0% { bottom: 13px;}
+        50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
+        100% {}
+    }
+
+    @-webkit-keyframes bar2 {
+        0% { bottom: 13px;}
+        50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+        100% {}
+    }
+

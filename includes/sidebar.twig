@@ -1,0 +1,37 @@
+<!-- Sidebar include -->
+<div class="template-sidebar">
+
+    <div class="sidebar-container">
+
+        {{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
+
+        <div class="sidebar-ecom-search">
+            <div class="sidebar-search-icon">
+                icon
+            </div>
+            <form class="form  ecomproductslist__form js-productlist-display-form" method="GET" action="/store">
+                <div class="form-body">
+                    <div class="form-group">
+                        <input class="input js-display-control" id="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__search" name="productlist-search" placeholder="Search Products..." type="search" value="">
+                    </div>
+                    <div class="form-group">
+                        <button class="button  button--submit  ecomproductslist__button" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- End sidebar-ecom-search -->
+
+        <div class="sidebar-basket">
+            <div class="sidebar-basket-icon">
+                basket icon
+            </div>
+            {{widget('ecombasket', 'shopbasket', {})|raw}}
+        </div>
+        <!-- End sidebar-basket -->
+
+    </div>
+    <!-- End sidebar-container -->
+
+</div>
+<!-- End template-sidebar -->

@@ -1,0 +1,323 @@
+// ---------------------
+// Sidebar - Ecom Basket
+// ---------------------
+
+.template-sidebar .ecombasket {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    .basket-toggle {
+        display: none;
+    }
+    .basket-body {
+        display: block;
+    }
+}
+
+.sidebar-basket .widget {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    .transform(@y:0, @x:-100%);
+    transition-duration: 0.4s;
+    @media only screen and (max-width: 600px) {
+        .transform(@y:-100%, @x:0);
+    }
+
+
+    z-index: 2;
+
+    padding: 150px 100px;
+    background-color: @color-swatch7;
+
+    // Allows scrolling on mobile
+    .ecombasket-open & {
+        overflow: auto;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 70px 40px;
+    }
+}
+
+// Blog Search when nav is blogsearch-open
+.ecombasket-open .widget {
+  .transform(@x:0, @y:0);
+}
+
+
+// Hides blogsearch until toggled
+.sidebar-basket .widget {
+    margin: 0;
+        .ecombasket-open & {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-left: 80px solid @color-swatch4;
+            @media only screen and (max-width: 600px) {
+                border-left: 0;
+                border-top: 45px solid @color-swatch4;
+            }
+        }
+}
+
+// Search Toggle Icon
+
+.sidebar-basket-icon {
+    position: relative;
+    .animation;
+    // Displays as icon's middle bar
+    background-clip: content-box;
+    width: 80px;
+    height: 45px;
+    margin: 0;
+    text-indent: 9999px;
+    overflow: hidden;
+    display: block;
+
+    .transition(@duration:0.2s, @ease:ease-in-out);
+
+    &:before {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            right: 50%;
+            margin-right: -10px;
+            content: "\f07a";
+            font-family: 'FontAwesome', sans-serif;
+            font-size: 24px;
+            color: @color-swatch1;
+            .transition(@duration:0.2s, @ease:ease-in-out);
+            @media only screen and (max-width: 600px) {
+                margin-top: -16px;
+            }
+        }
+
+    &:hover {
+        &:before {
+            color: @color-swatch3;
+            .transition(@duration:0.2s, @ease:ease-in-out);
+        }
+    }
+
+    // Toggle Button blogsearch-open state
+    // -----------------------------------
+
+    .ecombasket-open & {
+        background-color: fade(@color-swatch7, 0%);
+        z-index: 100000;
+
+        &:after,
+        &:before {
+            content: "";
+            height: 3px;
+            width: 30px;
+            position: absolute;
+            left: 20px;
+            display: block;
+            background: @color-swatch7;
+            margin-right: 0;
+            margin-left: 0;
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+        }
+
+        &:before {
+            top: 43px;
+            background: @color-swatch7;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+        }
+        &:after {
+            bottom: 14px;
+            background: @color-swatch7;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+@keyframes bar1 {
+0% { top: 13px;}
+50% { top: 23px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
+100% {top: 23px; background: @color-swatch1; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);   }
+}
+
+@-webkit-keyframes bar1 {
+    0% { top: 13px;}
+    50% { top: 23px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+    100% {  }
+}
+
+@keyframes bar2 {
+    0% { bottom: 13px;}
+    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
+    100% {}
+}
+
+@-webkit-keyframes bar2 {
+    0% { bottom: 13px;}
+    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+    100% {}
+}
+
+
+
+
+// Toggle Button blogsearch-open state
+// -----------------------------------
+
+.template-sidebar {
+    .ecombasket {
+        width: 80%;
+        margin: 0 auto;
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+        }
+    }
+    .basket-item {
+        padding-bottom: 20px;
+        border-bottom: 1px solid @color-swatch3;
+    }
+    .item-image  { width: 200px; }
+
+    .basket-item-image .image-link {
+        background-color: @color-swatch1;
+    }
+
+    // Display basket image and content inline
+
+    .basket-item-image,
+    .basket-item-details {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+        @media @tablet {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    // Item Remove Button
+
+    .item-remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        color: @color-swatch4;
+        // Remove icon spacing
+        &:before {
+            margin-right: 0;
+        }
+    }
+    // Hide button text
+
+    .remove-text {
+        display: none;
+    }
+
+    // Basket Image
+
+    .basket .image {
+        max-height: 200px;
+        max-width: 200px;
+        @media @mobile {
+            max-height: inherit;
+        }
+    }
+
+    // Quantity Field
+
+    .quantity-field {
+        background: transparent;
+        padding: 0 10px;
+    }
+
+    .quantity-wrap {
+        background: transparent;
+        .button--quantity {
+            width: 22px;
+            height: 22px;
+            margin: 0;
+            line-height: 0;
+        }
+        // button rounded corners
+        .quantity-minus {
+            -webkit-border-radius: 3px 0 0 3px;
+            -moz-border-radius: 3px 0 0 3px;
+            border-radius: 3px 0 0 3px;
+        }
+        .quantity-plus {
+            -webkit-border-radius: 0 3px 3px 0;
+            -moz-border-radius: 0 3px 3px 0;
+            border-radius: 0 3px 3px 0;
+        }
+        // increase button size for mobile
+        @media @mobile {
+            max-width: 50%;
+            .quantity-field {
+                height: 40px;
+                padding: 9px;
+
+            }
+            .button--quantity {
+                margin: 0;
+                width: 25%;
+                height: 40px;
+            }
+        }
+    }
+    .basket-footer {
+        display: inline-block;
+        width: 100%;
+        .basket-total {
+            float: left;
+            @media @mobile {
+                width: 100%;
+            }
+        }
+        .view-basket {
+            float: right;
+            color: @color-swatch4;
+            @media @mobile {
+                float: left;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+// -----------------------------
+// LESS Includes
+// -----------------------------
+
+
+@import "@{templateCommon}/bk-less-framework.less";
+
+@import "@{templateLocal}/less/variables-mixins.less";
+
+@import "@{templateLocal}/less/widget-navigation.less";
+
+@import "@{templateLocal}/less/sidebar.less";
+
+@import "@{templateLocal}/less/sidebar-ecom-basket.less";
+
+@import "@{templateLocal}/less/sidebar-ecom-search.less";
+
+
+
+
+// -----------------------------
+// Typography
+// -----------------------------
+
+    // Anchor links
+    a {
+        color: darken(@color-swatch2, 10%);
+    }
+
+
+
+
+// -----------------------------
+// Global Styles
+// -----------------------------
+
+
+// Wrapping container
+.container {
+    max-width: 1200px;
+    margin: 0 auto 0 160px;
+    width: 80%;
+
+    @media only screen and (max-width: 800px) {
+        margin: 0 auto 0 100px;
+    }
+    @media only screen and (max-width: 600px) {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+
+// Stops mobile scrolling of the body - only the nav is scrollable
+.noscroll {
+    overflow: hidden;
+}
+
+//Used on the blog post page
+.post-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+
+
+// -----------------------------
+// Page Layout
+// -----------------------------
+
+.page-wrapper {
+    padding-top: 40px;
+
+    @media only screen and (max-width: 600px) {
+        padding-top: 70px;
+    }
+}
+
+.template-content {
+    margin-top: 100px;
+
+    @media only screen and (max-width: 600px) {
+        margin-top: 80px;
+    }
+}
+
+.home-copy {
+    margin-bottom: 100px;
+}
+
+
+
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+.template-footer {
+    margin-top: 100px;
+    width: 100%;
+    float: left;
+}
+
+
+
