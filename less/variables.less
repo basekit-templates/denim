@@ -1,0 +1,209 @@
+// -----------------------------------------
+// Variable Template: LESS > Color Variables
+// -----------------------------------------
+
+// Custom
+// ----------
+
+@color__primary:                                            #222a3f; // Dark Blue
+@color__secondary:                                          #d6e1ee; // Light Blue
+
+
+// Site
+// ----------
+
+@color__body--background:                                   #fff;
+@color__container--background:                              @color__body--background;
+@color__body--border:                                       @color__body--background;
+@color__link--text:                                         @color__primary;
+@color__companyname--text:                                  @color__primary;
+
+
+// Layout
+// ----------
+
+@color__header--background:                                 @color__body--background;
+@color__header--border:                                     @color__body--background;
+
+@color__footer--background:                                 #eae8e8;
+@color__footer--border:                                     darken(@color__footer--background, 15%);
+
+@color__sidebar--background:                                @color__primary;
+@color__sidebar--border:                                    darken(@color__sidebar--background, 15%);
+
+
+// Typography / Buttons
+// --------------------
+
+// Headings
+@color__h1--text:                                           #222a3f;
+@color__h1--background:                                     transparent;
+@font__h1--font-family :                                    "Cabin", "Oswald", Arial, sans-serif;
+@font__h1--font-size :                                      30px;
+@font__h1--font-weight :                                    700;
+@font__h1--line-height:                                     40px;
+@font__h1--letter-spacing :                                 inherit;
+
+@color__h2--text:                                           #222a3f;
+@color__h2--background:                                     transparent;
+@font__h2--font-family :                                    "Cabin", "Oswald", Arial, sans-serif;
+@font__h2--font-size :                                       26px;
+@font__h2--font-weight :                                     700;
+@font__h2--line-height :                                     36px;
+@font__h2--letter-spacing :                                  inherit;
+
+@color__h3--text:                                           #222a3f;
+@color__h3--background:                                     transparent;
+@font__h3--font-family :                                    "Cabin", "Oswald", Arial, sans-serif;
+@font__h3--font-size :                                       24px;
+@font__h3--font-weight :                                     700;
+@font__h3--line-height :                                     34px;
+@font__h3--letter-spacing :                                  inherit;
+
+@color__h4--text:                                           #222a3f;
+@color__h4--background:                                     transparent;
+@font__h4--font-family :                                    "Cabin", "Oswald", Arial, sans-serif;
+@font__h4--font-size :                                       22px;
+@font__h4--font-weight :                                     700;
+@font__h4--line-height :                                     32px;
+@font__h4--letter-spacing :                                  inherit;
+
+@color__p--text:                                            #948e8c;
+@color__p--background:                                      transparent;
+@font__p--font-family :                                     "Cabin", "Oswald", Arial, sans-serif;
+@font__p--font-size :                                       16px;
+@font__p--font-weight :                                     400;
+@font__p--line-height :                                     26px;
+@font__p--letter-spacing :                                  inherit;
+
+// Buttons
+@color__button--background:                                 @color__secondary;
+@color__button--background--hover:                          darken(@color__secondary, 15%);
+@color__button--text:                                       @color__primary;
+@color__button--border:                                     darken(@color__secondary, 5%);
+
+
+// Navigation
+// ----------
+
+@color__navigation--background:                             #f6f5f3;
+@color__navigation-list--background:                        #f6f5f3;
+
+@color__navigation--text:                                   #566884;
+@color__navigation--text--hover:                            @color__primary;
+@color__navigation--text--selected:                         @color__primary;
+
+
+// Standard Widgets
+// ----------------
+
+// Feature
+@color__feature--background:                                @color__body--background;
+@color__feature-content--background:                        transparent;
+
+@color__feature-headline--text:                             @color__primary;
+@color__feature-headline--background:                       transparent;
+@color__feature-strapline--text:                            @color__primary;
+@color__feature-strapline--background:                      transparent;
+
+@color__feature-button--background:                         @color__secondary;
+@color__feature-button--background--hover:                  darken(@color__button--background, 15%);
+@color__feature-button--text:                               @color__secondary;
+@color__feature-button--border:                             darken(@color__button--background, 15%);
+
+// Image
+@color__image--background:                                  @color__body--background;
+@color__image-caption--background:                          transparent;
+@color__image-title--text:                                  @color__primary;
+@color__image-description--text:                            @color__p--text;
+
+// Gallery
+@color__gallery--background:                                @color__body--background;
+@color__gallery-caption--background:                        rgba(255,255,255,0.8);
+@color__gallery-title--text:                                @color__primary;
+@color__gallery-description--text:                          @color__p--text;
+
+// Slideshow
+@color__slideshow--background:                              @color__body--background;
+@color__slideshow-caption--background:                      rgba(255,255,255,0.8);
+@color__slideshow-title--text:                              @color__primary;
+@color__slideshow-description--text:                        @color__p--text;
+
+@color__slideshow-pagination-item--background:              @color__body--background;
+@color__slideshow-pagination-item--background--selected:    @color__primary;
+@color__slideshow-pagination-item--text:                    @color__p--text;
+
+// Twitter Feed
+@color__twitter--background:                                transparent;
+@color__twitter-item--background:                           #f6f5f3;
+@color__twitter-account-name--background:                   @color__primary;
+
+// Forms
+@color__form--background:                                   #f6f5f3;
+@color__form-legend--background:                            transparent;
+@color__form-legend--text:                                  #948e8c;
+@color__form-label--text:                                   #948e8c;
+
+// Social Icons
+@color__socialicons--icon--background:                      @color__secondary;
+@color__socialicons--text:                                  @color__secondary;
+@color__socialicons--icon--background:                      @color__primary;
+
+
+// Plugin Widgets
+// --------------
+
+// Blog
+// ----------
+
+// Blog Search
+@color__blogsearch--background:                             @color__form--background;
+@color__blogsearch-legend--background:                      transparent;
+@color__blogsearch-legend--text:                            #948e8c;
+@color__blogsearch-label--text:                             #948e8c;
+
+// Blog Post List
+@color__blogpostlist--background:                           @color__body--background;
+@color__blogpostlist-article--background:                   @color__body--background;
+@color__blogpostlist-title--background:                     transparent;
+@color__blogpostlist-title--text:                           @color__secondary;
+
+// Blog Single Post
+@color__blogpost--background:                               @color__body--background;
+@color__blogpost-article--background:                       @color__body--background;
+@color__blogpost-title--background:                         @color__secondary;
+@color__blogpost-title--text:                               @color__p--text;
+
+
+// Ecommerce
+// ----------
+
+// Ecommerce Product List
+@color__ecomproductslist--background:                       @color__body--background;
+
+@color__ecomproductslist-filters--background:               @color__body--background;
+@color__ecomproductslist-legend--background:                transparent;
+@color__ecomproductslist-legend--text:                      @color__p--text;
+@color__ecomproductslist-label--text:                       @color__p--text;
+
+@color__ecomproductslist-product-list--background:          transparent;
+@color__ecomproductslist-product-item--background:          transparent;
+@color__ecomproductslist-product-title--background:         transparent;
+@color__ecomproductslist-product-title--text:               @color__primary;
+
+// Ecommerce Single Product
+@color__ecomproduct--background:                            @color__body--background;
+@color__ecomproduct-images--background:                     @color__body--background;
+@color__ecomproduct-content--background:                    @color__body--background;
+@color__ecomproduct-title--background:                      transparent;
+@color__ecomproduct-title--text:                            @color__secondary;
+@color__ecomproduct-price--background:                      transparent;
+@color__ecomproduct-price--text:                            @color__p--text;
+
+// Ecommerce Basket
+@color__ecombasket--background:                             @color__body--background;
+@color__ecombasket-list--background:                        @color__body--background;
+@color__ecombasket-button--background:                      @color__button--background;
+@color__ecombasket-button--background--hover:               @color__button--background--hover;
+@color__ecombasket-button--text:                            @color__button--text;
+@color__ecombasket-button--border:                          @color__button--border;

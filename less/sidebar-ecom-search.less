@@ -11,13 +11,13 @@
             width: 100%;
         }
         .legend {
-            color: @color-swatch7;
+            color: @color__form-legend--background;
         }
         .button {
-            background-color: @color-swatch3;
+            background-color: @color__button--background;
         }
         .button:hover {
-            background-color: lighten(@color-swatch3, 10%);
+            background-color: @color__button--background--hover;
         }
     }
 
@@ -26,7 +26,13 @@
         left: 0;
         top: 0;
         height: 100vh;
-        width: 100%;
+        width: 50%;
+        @media only screen and (max-width: 960px) {
+            width: 60%;
+        }
+        @media @tablet {
+            width: 100%;
+        }
         .transform(@y:0, @x:-100%);
         transition-duration: 0.4s;
 

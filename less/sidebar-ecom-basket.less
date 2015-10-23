@@ -19,15 +19,21 @@
     left: 0;
     top: 0;
     height: 100vh;
-    width: 100%;
+    width: 50%;
+    @media only screen and (max-width: 960px) {
+        width: 60%;
+    }
+    @media @tablet {
+        width: 100%;
+    }
     .transform(@y:0, @x:-100%);
     transition-duration: 0.4s;
 
 
     z-index: 2;
 
-    padding: 150px 100px;
-    background-color: @color-swatch7;
+    padding: 100px 50px;
+    background-color: @color__navigation--background;
 
     // Allows scrolling on mobile
     .ecombasket-open & {
@@ -67,10 +73,10 @@
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
-            border-left: 80px solid @color-swatch4;
+            border-left: 80px solid @color__primary;
             @media only screen and (max-width: 600px) {
                 border-left: 0;
-                border-top: 45px solid @color-swatch4;
+                border-top: 45px solid @color__primary;
             }
         }
 }
@@ -100,7 +106,7 @@
             content: "\f07a";
             font-family: 'FontAwesome', sans-serif;
             font-size: 24px;
-            color: @color-swatch1;
+            color: #ffffff;
             .transition(@duration:0.2s, @ease:ease-in-out);
             @media only screen and (max-width: 600px) {
                 margin-top: -16px;
@@ -109,7 +115,7 @@
 
     &:hover {
         &:before {
-            color: @color-swatch3;
+            color: #d6e1ee;
             .transition(@duration:0.2s, @ease:ease-in-out);
         }
     }
@@ -118,7 +124,7 @@
     // -----------------------------------
 
     .ecombasket-open & {
-        background-color: fade(@color-swatch7, 0%);
+        background-color: fade(#ffffff, 0%);
         z-index: 100000;
 
         &:after,
@@ -129,7 +135,7 @@
             position: absolute;
             left: 20px;
             display: block;
-            background: @color-swatch7;
+            background: #ffffff;
             margin-right: 0;
             margin-left: 0;
             -webkit-transition: all 0.25s ease-in-out;
@@ -140,7 +146,7 @@
 
         &:before {
             top: 43px;
-            background: @color-swatch7;
+            background: #ffffff;
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
             -o-transform: rotate(45deg);
@@ -148,9 +154,10 @@
             transform: rotate(45deg);
 
         }
+
         &:after {
             bottom: 14px;
-            background: @color-swatch7;
+            background: #ffffff;
             -webkit-transform: rotate(-45deg);
             -moz-transform: rotate(-45deg);
             -o-transform: rotate(-45deg);
@@ -161,26 +168,70 @@
 }
 
 @keyframes bar1 {
-0% { top: 13px;}
-50% { top: 23px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
-100% {top: 23px; background: @color-swatch1; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);   }
+    0% {
+        top: 13px;
+    }
+    50% {
+        top: 23px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 23px;
+        background: #ffffff;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
 }
 
 @-webkit-keyframes bar1 {
-    0% { top: 13px;}
-    50% { top: 23px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+    0% {
+        top: 13px;
+    }
+    50% {
+        top: 23px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
     100% {  }
 }
 
 @keyframes bar2 {
-    0% { bottom: 13px;}
-    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
+    0% {
+        bottom: 13px;
+    }
+    50% {
+        bottom: 21px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
     100% {}
 }
 
 @-webkit-keyframes bar2 {
-    0% { bottom: 13px;}
-    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
+    0% {
+        bottom: 13px;
+    }
+    50% {
+        bottom: 21px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
     100% {}
 }
 
@@ -200,12 +251,12 @@
     }
     .basket-item {
         padding-bottom: 20px;
-        border-bottom: 1px solid @color-swatch3;
+        border-bottom: 1px solid @color__secondary;
     }
     .item-image  { width: 200px; }
 
     .basket-item-image .image-link {
-        background-color: @color-swatch1;
+        background-color: #ffffff;
     }
 
     // Display basket image and content inline
@@ -228,7 +279,8 @@
         top: 0;
         right: 0;
         z-index: 9999;
-        color: @color-swatch4;
+        color: @color__button--text;
+        background-color: @color__button--background;
         // Remove icon spacing
         &:before {
             margin-right: 0;
@@ -248,6 +300,16 @@
         @media @mobile {
             max-height: inherit;
         }
+    }
+
+    // Basket Text
+
+    .basket-item-name,
+    .item-quantity,
+    .basket-item-price
+     {
+        font-size: @font__p--font-size;
+        line-height: @font__p--line-height;
     }
 
     // Quantity Field
@@ -294,17 +356,26 @@
     .basket-footer {
         display: inline-block;
         width: 100%;
-        .basket-total {
-            float: left;
-            @media @mobile {
-                width: 100%;
+        .view-basket {
+            color: @color__button--text;
+            margin: 10px 0;
+        }
+        @media @tablet {
+            .basket-total {
+                float: left;
+            }
+            .view-basket {
+                float: right;
+                margin: 0;
             }
         }
-        .view-basket {
-            float: right;
-            color: @color-swatch4;
-            @media @mobile {
+        @media @mobile {
+            .basket-total {
+                width: 100%;
+            }
+            .view-basket {
                 float: left;
+                margin: 20px 0 10px;
             }
         }
     }

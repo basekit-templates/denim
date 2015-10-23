@@ -22,7 +22,13 @@
     position: fixed;
     top: 0;
     height: 100vh;
-    width: 100%;
+    width: 50%;
+    @media only screen and (max-width: 960px) {
+        width: 60%;
+    }
+    @media @tablet {
+        width: 100%;
+    }
     .transform(@x:-100%, @y:0);
     transition-duration: 0.4s;
 
@@ -30,7 +36,7 @@
     z-index: 2;
 
     padding: 150px 100px;
-    background-color: @color-swatch7;
+    background-color: @color__navigation--background;
 
     // Allows scrolling on mobile
     &.open {
